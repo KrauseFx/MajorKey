@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     let emailAdress = "[email]"
     let apiKey = "[key]"
+    let defaults = "MajorKeys"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,15 @@ class ViewController: UIViewController {
 
     @IBAction func didPressMajorKey(_ sender: Any) {
         let text = self.majorTextView.text!
+        var oldKeys = UserDefaults.standard.stringArray(forKey: defaults)
+        if oldKeys == nil {
+            oldKeys = []
+        }
+        oldKeys!.append(text)
+        UserDefaults.standard.set(oldKeys, forKey: defaults)
+
+        
+        
         let personalization = Personalization(recipients: emailAdress)
         let plainText = Content(contentType: ContentType.plainText, value: text)
         let email = Email(
@@ -62,6 +72,10 @@ class ViewController: UIViewController {
         SwiftMessages.show(config: config, view: view)
         
         self.majorTextView.text = ""
+    }
+
+    @IBAction func didTapOldKeys(_ sender: Any) {
+        self.majorTextView.text = UserDefaults.standard.stringArray(forKey: defaults)?.reversed().joined(separator: "\n")
     }
 }
 

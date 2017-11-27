@@ -33,6 +33,16 @@
                                     <action selector="didPressMajorKey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SMj-mU-qTj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRh-Pg-N58">
+                                <rect key="frame" x="254" y="368" width="105" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="📦"/>
+                                <connections>
+                                    <action selector="didPressMajorKey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eYF-nn-3Ou"/>
+                                    <action selector="didTapOldKeys:" destination="BYZ-38-t0r" eventType="touchUpInside" id="83d-Fu-xJt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
