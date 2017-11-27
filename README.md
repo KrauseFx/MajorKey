@@ -11,7 +11,7 @@ You want to jot down that thought as quickly as possible so you don't forget, an
 
 - Unlock phone
 - Launch the notes app
-- Navigate to the list of notes (as in the folder list you might not have the `+` button)
+- Navigate to the list of notes
 - Tap the `+` button
 - Type the note
 
@@ -36,7 +36,7 @@ The new app uses web clips to launch a specific "workflow", which was okayish (a
 
 ## Introducing Major Key, the best key
 
-![screenshot.png](screenshot.png)
+<img src="screenshot.png" width="300">
 
 With far less than 100 lines of Swift code, this simple app does all you need:
 
@@ -47,7 +47,7 @@ With far less than 100 lines of Swift code, this simple app does all you need:
 
 All with no waiting times or animations.
 
-[See the app in action](https://www.youtube.com/watch?v=dOm5H5a8fbY)
+[**See the app in action**](https://www.youtube.com/watch?v=dOm5H5a8fbY)
 
 ## Use the app
 
