@@ -10,7 +10,7 @@ import UIKit
 import SendGrid
 import SwiftMessages
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var keyButton: UIButton!
     @IBOutlet weak var majorTextView: UITextView!
     
@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.majorTextView.text = ""
+        self.majorTextView.delegate = self
         
         Session.shared.authentication = Authentication.apiKey(apiKey)
     }
@@ -29,6 +30,13 @@ class ViewController: UIViewController {
         self.majorTextView.becomeFirstResponder()
     }
 
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n") {
+            self.didPressMajorKey(textView)
+            return false
+        }
+        return true
+    }
 
     @IBAction func didPressMajorKey(_ sender: Any) {
         let text = self.majorTextView.text!

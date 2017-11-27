@@ -41,7 +41,7 @@ The new app uses web clips to launch a specific "workflow", which was okayish (a
 With far less than 100 lines of Swift code, this simple app does all you need:
 
 - Unlock phone
-- Launch Major Key
+- Launch Major Key 🔑
 - Type the note
 - Confirm
 
