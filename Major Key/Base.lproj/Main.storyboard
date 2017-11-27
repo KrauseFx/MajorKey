@@ -18,11 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mjb-rO-mzx">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Some random text here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mjb-rO-mzx">
+                                <rect key="frame" x="20" y="40" width="335" height="607"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0L-Vw-KMV">
@@ -30,17 +29,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                 <state key="normal" title="🔑"/>
+                                <connections>
+                                    <action selector="didPressMajorKey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SMj-mU-qTj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mjb-rO-mzx" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="2jd-1M-h5m"/>
-                            <constraint firstItem="mjb-rO-mzx" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="ARm-ba-G9i"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="mjb-rO-mzx" secondAttribute="bottom" constant="-647" id="Jkd-Ck-qG7"/>
-                            <constraint firstItem="mjb-rO-mzx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-375" id="nFH-gZ-BAt"/>
+                            <constraint firstItem="mjb-rO-mzx" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" constant="-40" id="2jd-1M-h5m"/>
+                            <constraint firstItem="mjb-rO-mzx" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" constant="-40" id="ARm-ba-G9i"/>
+                            <constraint firstItem="mjb-rO-mzx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="KXd-cu-0SG"/>
+                            <constraint firstItem="mjb-rO-mzx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aTy-Mq-Hqp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="keyButton" destination="J0L-Vw-KMV" id="7sJ-qe-tH0"/>
+                        <outlet property="majorTextView" destination="mjb-rO-mzx" id="RLz-cj-LOL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
