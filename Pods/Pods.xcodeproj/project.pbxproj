@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -210,7 +210,7 @@
 		14ADCC5F046C13016086749AA0E23923 /* Deprecations.Request.1.0.0.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecations.Request.1.0.0.swift; path = Sources/SendGrid/Deprecations/1.0.0/Deprecations.Request.1.0.0.swift; sourceTree = "<group>"; };
 		16DE8DEB9B5EF2E7E68D277A924F739A /* Exception+Statistic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Exception+Statistic.swift"; path = "Sources/SendGrid/Errors/Exception+Statistic.swift"; sourceTree = "<group>"; };
 		178CB215343AC75F23B1D387BC8F66E0 /* MarginAdjustable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarginAdjustable.swift; path = SwiftMessages/MarginAdjustable.swift; sourceTree = "<group>"; };
-		1A283A339E607B9D7DC3B00CC60AE464 /* SwiftMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftMessages.framework; path = SwiftMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A283A339E607B9D7DC3B00CC60AE464 /* SwiftMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D62210E4914A45A8888EDBD96105A13 /* SubscriptionTracking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SubscriptionTracking.swift; path = Sources/SendGrid/API/V3/Mail/Send/Settings/Tracking/SubscriptionTracking.swift; sourceTree = "<group>"; };
 		202897B082C120F45F7C26AFBD4000AC /* Footer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Footer.swift; path = Sources/SendGrid/API/V3/Mail/Send/Settings/Mail/Footer.swift; sourceTree = "<group>"; };
 		2086E7BB3BFC76B258C9E487C41AE62D /* TabView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = TabView.xib; path = SwiftMessages/Resources/TabView.xib; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 		262A4F77AC624E4109D1E11362204168 /* Deprecations.ContentType.1.0.0.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecations.ContentType.1.0.0.swift; path = Sources/SendGrid/Deprecations/1.0.0/Deprecations.ContentType.1.0.0.swift; sourceTree = "<group>"; };
 		284312949C4BDEAC4721EB699B776BA5 /* ResourceBundle-SwiftMessages-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SwiftMessages-Info.plist"; sourceTree = "<group>"; };
 		2BCA953B64B3083CF1938945D32E43FD /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Sources/SendGrid/Classes/Session.swift; sourceTree = "<group>"; };
-		2C8C2B7EC3B054DFFCF674C3CE65F7C5 /* Pods-Major Key.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Major Key.modulemap"; sourceTree = "<group>"; };
+		2C8C2B7EC3B054DFFCF674C3CE65F7C5 /* Pods-Major Key.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Major Key.modulemap"; sourceTree = "<group>"; };
 		2D91E6F5A2F97B675F501F6587CF76C0 /* AccessibleMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessibleMessage.swift; path = SwiftMessages/AccessibleMessage.swift; sourceTree = "<group>"; };
 		3309B3BDBFCA7FE3054F8B3FA4091154 /* SwiftMessages-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMessages-prefix.pch"; sourceTree = "<group>"; };
 		34177018F6B8169F969D9538EBE65356 /* Deprecations.EmailHeaderRepresentable.1.0.0.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecations.EmailHeaderRepresentable.1.0.0.swift; path = Sources/SendGrid/Deprecations/1.0.0/Deprecations.EmailHeaderRepresentable.1.0.0.swift; sourceTree = "<group>"; };
@@ -238,7 +238,7 @@
 		3D4001D7954CBC6EAB62C15F751420F6 /* Exception+Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Exception+Session.swift"; path = "Sources/SendGrid/Errors/Exception+Session.swift"; sourceTree = "<group>"; };
 		3D57AE9CD83F6586FCCC9EB3B4E64B58 /* errorIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "errorIcon@2x.png"; path = "SwiftMessages/Resources/errorIcon@2x.png"; sourceTree = "<group>"; };
 		3D5CF84021CA809C9567FE8111ED1B31 /* GlobalUnsubscribe.Add.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GlobalUnsubscribe.Add.swift; path = "Sources/SendGrid/API/V3/Suppression/Global Unsubscribes/GlobalUnsubscribe.Add.swift"; sourceTree = "<group>"; };
-		3E7D18A05AAEFEF6D6ECA5CF2E3343A5 /* SendGrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SendGrid.framework; path = SendGrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E7D18A05AAEFEF6D6ECA5CF2E3343A5 /* SendGrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SendGrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6F03EC8AA1D67F4F8EA62FFFEEF7E8 /* Statistic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statistic.swift; path = Sources/SendGrid/API/Models/Stats/Statistic.swift; sourceTree = "<group>"; };
 		4465A9D385E385E14A856126065D9B58 /* Deprecations.Exception.1.0.0.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecations.Exception.1.0.0.swift; path = Sources/SendGrid/Deprecations/1.0.0/Deprecations.Exception.1.0.0.swift; sourceTree = "<group>"; };
 		454E471788CCA799466051AFB563914C /* MessageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessageView.swift; path = SwiftMessages/MessageView.swift; sourceTree = "<group>"; };
@@ -268,14 +268,14 @@
 		5E10DA3509A2EB3D2594CFC411B38952 /* errorIconSubtle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "errorIconSubtle@2x.png"; path = "SwiftMessages/Resources/errorIconSubtle@2x.png"; sourceTree = "<group>"; };
 		60FECEC1E0C4F157B857863C44B69D6A /* Exception.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Exception.swift; path = Sources/SendGrid/Errors/Exception.swift; sourceTree = "<group>"; };
 		61C8BA76D6CB455C135D782DF0A7D200 /* Array+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Utils.swift"; path = "SwiftMessages/Array+Utils.swift"; sourceTree = "<group>"; };
-		65396D37D8BFB26C2639EE8A2C6E52DD /* Pods_Major_Key.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Major_Key.framework; path = "Pods-Major Key.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65396D37D8BFB26C2639EE8A2C6E52DD /* Pods_Major_Key.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Major_Key.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65ACDCECAF4038BAB4E377993627C64B /* warningIconLight@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "warningIconLight@3x.png"; path = "SwiftMessages/Resources/warningIconLight@3x.png"; sourceTree = "<group>"; };
 		67E4DCA4F21145F7AB815A810438E9B7 /* Deprecations.Content.1.0.0.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecations.Content.1.0.0.swift; path = Sources/SendGrid/Deprecations/1.0.0/Deprecations.Content.1.0.0.swift; sourceTree = "<group>"; };
 		68085623FC9684207B38E6A467B2DEB9 /* BypassListManagement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BypassListManagement.swift; path = Sources/SendGrid/API/V3/Mail/Send/Settings/Mail/BypassListManagement.swift; sourceTree = "<group>"; };
 		690360BA7508F5AFF22916F9FF5E3D67 /* Attachment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Attachment.swift; path = Sources/SendGrid/API/V3/Mail/Send/Attachment.swift; sourceTree = "<group>"; };
 		69A4C416D225F0D038543E033371BCC9 /* Pods-Major Key-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Major Key-frameworks.sh"; sourceTree = "<group>"; };
 		6A1A448FA927874A01F192B387FBB384 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B6A57F93F716FC91ECF7D2EE399743C /* SwiftMessages.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftMessages.modulemap; sourceTree = "<group>"; };
+		6B6A57F93F716FC91ECF7D2EE399743C /* SwiftMessages.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftMessages.modulemap; sourceTree = "<group>"; };
 		6B7B26831AF02C807336F3F1595B798C /* GlobalUnsubscribe.Get.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GlobalUnsubscribe.Get.swift; path = "Sources/SendGrid/API/V3/Suppression/Global Unsubscribes/GlobalUnsubscribe.Get.swift"; sourceTree = "<group>"; };
 		6DC27D45B3A47B545249331BF7DEA6FA /* InvalidEmail.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InvalidEmail.swift; path = Sources/SendGrid/API/Models/Events/InvalidEmail.swift; sourceTree = "<group>"; };
 		6F7FC7FE8AF35D286D78617D6207039C /* Pods-Major Key-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Major Key-dummy.m"; sourceTree = "<group>"; };
@@ -299,7 +299,7 @@
 		8B185B0FD75B414EA5C045C173460C68 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = SwiftMessages/Error.swift; sourceTree = "<group>"; };
 		8CCA33B2F3C4801B26CA5F957F022834 /* SpamReport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpamReport.swift; path = Sources/SendGrid/API/Models/Events/SpamReport.swift; sourceTree = "<group>"; };
 		8D0E50F26310DE9DF28CFE72ED63220F /* Scheduling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Scheduling.swift; path = Sources/SendGrid/Protocols/Scheduling.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		956A61994973EBF37B6F39C320A03731 /* ContentType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentType.swift; path = Sources/SendGrid/Structs/ContentType.swift; sourceTree = "<group>"; };
 		963FD6F1D2BE84B75AD0E0F7359F1E31 /* warningIcon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "warningIcon@2x.png"; path = "SwiftMessages/Resources/warningIcon@2x.png"; sourceTree = "<group>"; };
 		9A70F292842EF44A101A7E870E29B894 /* Email.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Email.swift; path = Sources/SendGrid/API/V3/Mail/Send/Email.swift; sourceTree = "<group>"; };
@@ -326,14 +326,14 @@
 		B9EA984B7F4752AE3DD06B357F5B5B54 /* PassthroughWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PassthroughWindow.swift; path = SwiftMessages/PassthroughWindow.swift; sourceTree = "<group>"; };
 		BEC5B6CCB0910DE5042726C9A76491E2 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Utils.swift"; path = "SwiftMessages/UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		BF17F55C2729D11DE744B31C1EB41F98 /* GlobalUnsubscribe.Delete.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GlobalUnsubscribe.Delete.swift; path = "Sources/SendGrid/API/V3/Suppression/Global Unsubscribes/GlobalUnsubscribe.Delete.swift"; sourceTree = "<group>"; };
-		C37AE05A7D3F57A717FD2820CBB96D1A /* SwiftMessages.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SwiftMessages.bundle; path = SwiftMessages.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37AE05A7D3F57A717FD2820CBB96D1A /* SwiftMessages.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMessages.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		C463BFF0414F77780F1F5BE781CEE1EB /* infoIconSubtle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "infoIconSubtle@2x.png"; path = "SwiftMessages/Resources/infoIconSubtle@2x.png"; sourceTree = "<group>"; };
 		C822CAA6EE4B20C00C01CA237D623B14 /* errorIcon@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "errorIcon@3x.png"; path = "SwiftMessages/Resources/errorIcon@3x.png"; sourceTree = "<group>"; };
 		C917FAB8B2D0586ED98A8F5E148E1FF1 /* AutoEncodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoEncodable.swift; path = Sources/SendGrid/Protocols/AutoEncodable.swift; sourceTree = "<group>"; };
 		CA175E4AC6089D4335F9DEFBD1C17E83 /* RateLimit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RateLimit.swift; path = Sources/SendGrid/Structs/RateLimit.swift; sourceTree = "<group>"; };
 		CBD0F312A8932E9055A65A2CE72D1230 /* Validate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validate.swift; path = Sources/SendGrid/Structs/Validate.swift; sourceTree = "<group>"; };
 		CC10C40EBD42772CB7D26D5CC437D4CA /* successIconSubtle@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "successIconSubtle@3x.png"; path = "SwiftMessages/Resources/successIconSubtle@3x.png"; sourceTree = "<group>"; };
-		CC15D8418C19C19F9E4B41678F3E1AA0 /* SendGrid.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SendGrid.modulemap; sourceTree = "<group>"; };
+		CC15D8418C19C19F9E4B41678F3E1AA0 /* SendGrid.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SendGrid.modulemap; sourceTree = "<group>"; };
 		CC5B4931D29FDD7732E094ACF2D84F11 /* Exception+Mail.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Exception+Mail.swift"; path = "Sources/SendGrid/Errors/Exception+Mail.swift"; sourceTree = "<group>"; };
 		CD62D67908BCF9486CB7E918214FDBEF /* Statistic.Aggregation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statistic.Aggregation.swift; path = Sources/SendGrid/Enums/Statistic.Aggregation.swift; sourceTree = "<group>"; };
 		CD9CE1AAB33052C23D6763F2817FE703 /* Statistic.Global.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statistic.Global.swift; path = Sources/SendGrid/API/V3/Stats/Statistic.Global.swift; sourceTree = "<group>"; };
@@ -620,7 +620,6 @@
 				CBD0F312A8932E9055A65A2CE72D1230 /* Validate.swift */,
 				909C1C4E403DC842EDF6835E8F4097DF /* Support Files */,
 			);
-			name = SendGrid;
 			path = SendGrid;
 			sourceTree = "<group>";
 		};
@@ -676,7 +675,6 @@
 				6C34087AEF9A36933A1EE63D6099A183 /* Resources */,
 				118AF833AE545363ADF6CA5203B389C2 /* Support Files */,
 			);
-			name = SwiftMessages;
 			path = SwiftMessages;
 			sourceTree = "<group>";
 		};
@@ -789,7 +787,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0910;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1116,6 +1114,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
