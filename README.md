@@ -36,7 +36,7 @@ The new app uses web clips to launch a specific "workflow", which was okayish (a
 
 ## Introducing Major Key, the best key
 
-<img src="screenshot.png" width="300">
+<img src="screenshot.png" width="300" align="right">
 
 With far less than 100 lines of Swift code, this simple app does all you need:
 
