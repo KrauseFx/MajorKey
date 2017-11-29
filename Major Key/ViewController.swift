@@ -27,6 +27,7 @@ class ViewController: UIViewController, UITextViewDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         self.majorTextView.becomeFirstResponder()
     }
 
@@ -46,8 +47,6 @@ class ViewController: UIViewController, UITextViewDelegate {
         }
         oldKeys!.append(text)
         UserDefaults.standard.set(oldKeys, forKey: defaults)
-
-        
         
         let personalization = Personalization(recipients: emailAdress)
         let plainText = Content(contentType: ContentType.plainText, value: text)
