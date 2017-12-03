@@ -11,7 +11,6 @@ import SendGrid
 import SwiftMessages
 
 class ViewController: UIViewController, UITextViewDelegate {
-    @IBOutlet weak var keyButton: UIButton!
     @IBOutlet weak var majorTextView: UITextView!
     
     let emailAdress = "[email]"
@@ -22,23 +21,28 @@ class ViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         self.majorTextView.text = ""
         self.majorTextView.delegate = self
+
+        let majorView = MajorKeyView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 92))
+        majorView.delegate = self
+        majorTextView.inputAccessoryView = majorView
         
         Session.shared.authentication = Authentication.apiKey(apiKey)
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         self.majorTextView.becomeFirstResponder()
     }
 
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n") {
-            self.didPressMajorKey(textView)
+            self.didPressMajorKey()
             return false
         }
         return true
     }
 
-    @IBAction func didPressMajorKey(_ sender: Any) {
+    func didPressMajorKey() {
         let text = self.majorTextView.text!
         var oldKeys = UserDefaults.standard.stringArray(forKey: defaults)
         if oldKeys == nil {
@@ -46,8 +50,6 @@ class ViewController: UIViewController, UITextViewDelegate {
         }
         oldKeys!.append(text)
         UserDefaults.standard.set(oldKeys, forKey: defaults)
-
-        
         
         let personalization = Personalization(recipients: emailAdress)
         let plainText = Content(contentType: ContentType.plainText, value: text)
@@ -82,8 +84,19 @@ class ViewController: UIViewController, UITextViewDelegate {
         self.majorTextView.text = ""
     }
 
-    @IBAction func didTapOldKeys(_ sender: Any) {
+    func didTapOldKeys() {
         self.majorTextView.text = UserDefaults.standard.stringArray(forKey: defaults)?.reversed().joined(separator: "\n")
+    }
+}
+
+extension ViewController: MajorKeyViewDelegate {
+    func didPressKeyButton(button: UIButton) {
+        didPressMajorKey()
+    }
+
+    func didPressPackageButton(button: UIButton) {
+        didPressMajorKey()
+        didTapOldKeys()
     }
 }
 
