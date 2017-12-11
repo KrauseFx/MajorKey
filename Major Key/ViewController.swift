@@ -16,6 +16,19 @@ class ViewController: UIViewController, UITextViewDelegate {
     let emailAdress = "[email]"
     let apiKey = "[key]"
     let defaults = "MajorKeys"
+    let quotes = [
+        "They kick you when you’re down, but they wanna kick it when you’re up.",
+        "You can never run out of keys.",
+        "Don’t ever play yourself.",
+        "You gotta water your plants. Nobody can water them for you.",
+        "Stay focused and secure your bag, because they want you to fail and they don’t want us to win.",
+        "I’m all about peace. I’m all about unity. I’m all about love.",
+        "We gonna win more. We gonna live more. We the best.",
+        "'They' are the people that don't believe in you, that say that you won't succeed. We stay away from 'They.'",
+        "Smh... They get mad when you have joy.",
+        "Another one. No, another two.",
+        "The key to more success is coco butter.",
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,13 +64,15 @@ class ViewController: UIViewController, UITextViewDelegate {
         oldKeys!.append(text)
         UserDefaults.standard.set(oldKeys, forKey: defaults)
         
+        let randomIndex = Int(arc4random_uniform(UInt32(quotes.count)))
+        let chosenQuote = quotes[randomIndex]
         let personalization = Personalization(recipients: emailAdress)
         let plainText = Content(contentType: ContentType.plainText, value: text)
         let email = Email(
             personalizations: [personalization],
             from: Address(email: emailAdress),
             content: [plainText],
-            subject: "[Major 🔑] \(text)"
+            subject: "[Major 🔑] \(chosenQuote)"
         )
         
         do {
@@ -71,7 +86,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         view.configureDropShadow()
         view.button!.removeFromSuperview()
         
-        view.configureContent(title: "Major Key", body: "Never forget dat major 🔑", iconText: "🔑")
+        view.configureContent(title: "Major Key", body: "\(chosenQuote) 🔑", iconText: "🔑")
         
         var config = SwiftMessages.Config()
         
