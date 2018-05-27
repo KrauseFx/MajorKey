@@ -72,7 +72,7 @@ class ViewController: UIViewController, UITextViewDelegate {
             personalizations: [personalization],
             from: Address(email: emailAdress),
             content: [plainText],
-            subject: "[Major 🔑] \(chosenQuote)"
+            subject: "[Major 🔑] \(text)"
         )
         
         do {
@@ -86,7 +86,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         view.configureDropShadow()
         view.button!.removeFromSuperview()
         
-        view.configureContent(title: "Major Key", body: "\(chosenQuote) 🔑", iconText: "🔑")
+        view.configureContent(title: "Major Key", body: chosenQuote, iconText: "🔑")
         
         var config = SwiftMessages.Config()
         
