@@ -73,8 +73,12 @@ github "SwiftKickMobile/SwiftMessages"
 1. Put SwiftMessages repo somewhere in your project directory.
 1. In Xcode, add `SwiftMessages.xcodeproj` to your project.
 1. On your app's target, add the SwiftMessages framework:
-  1. as an embedded binary on the General tab.
-  1. as a target dependency on the Build Phases tab.
+   1. as an embedded binary on the General tab.
+   1. as a target dependency on the Build Phases tab.
+
+## In the App Store
+
+We'd love to know who's using SwiftMessages! Please take a moment to [let me know about](https://github.com/wtmoose) about your app and, if possible, attach a screenshot. We may feature some of them here in the future.
 
 ## Usage
 
@@ -90,7 +94,7 @@ and assortment of nib-based layouts that should handle most cases:
 ````swift
 // Instantiate a message view from the provided card view layout. SwiftMessages searches for nib
 // files in the main bundle first, so you can easily copy them into your project and make changes.
-let view = MessageView.viewFromNib(layout: .CardView)
+let view = MessageView.viewFromNib(layout: .cardView)
 
 // Theme message elements with the warning style.
 view.configureTheme(.warning)
@@ -112,7 +116,7 @@ your UIKit code is executed on the main queue:
 
 ````swift
 SwiftMessages.show {
-    let view = MessageView.viewFromNib(layout: .CardView)
+    let view = MessageView.viewFromNib(layout: .cardView)
     // ... configure the view
     return view
 }
@@ -258,7 +262,7 @@ To facilitate the use of nib-based layouts, `MessageView` provides some type-saf
 // Instantiate MessageView from one of the provided nibs in a type-safe way.
 // SwiftMessages searches the main bundle first, so you easily copy the nib into
 // your project and modify it while still using this type-safe call.
-let view = MessageView.viewFromNib(layout: .CardView)
+let view = MessageView.viewFromNib(layout: .cardView)
 ````
 
 In addition, the `SwiftMessages` class provides some generic loading methods:

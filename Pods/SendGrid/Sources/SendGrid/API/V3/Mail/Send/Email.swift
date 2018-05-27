@@ -534,7 +534,7 @@ import Foundation
 ///     print(error)
 /// }
 /// ```
-public class Email: Request<[String:Any]>, EmailHeaderRepresentable, Scheduling {
+public class Email: Request<JSONValue>, EmailHeaderRepresentable, Scheduling {
     
     // MARK: - Properties
     //=========================================================================

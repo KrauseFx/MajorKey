@@ -10,13 +10,10 @@ import Foundation
 /// The `SuppressionListDeleter` class is base class inherited by requests that
 /// delete entries from a supression list. You should not use this class
 /// directly.
-public class SuppressionListDeleter<T : EmailEventRepresentable>: Request<[String : Any]> {
+public class SuppressionListDeleter<T : EmailEventRepresentable>: Request<JSONValue> {
 
     // MARK: - Properties
     //=========================================================================
-
-    /// The path for the request's API endpoint.
-    internal var path: String { return "/" }
     
     /// A `Bool` indicating if all the events on the suppression list should be
     /// deleted.
@@ -32,13 +29,14 @@ public class SuppressionListDeleter<T : EmailEventRepresentable>: Request<[Strin
     /// Private initializer to set all the required properties.
     ///
     /// - Parameters:
+    ///   - path:       The path for the request's API endpoint.
     ///   - deleteAll:  A `Bool` indicating if all the events on the suppression
     ///                 list should be deleted.
     ///   - emails:     An array of emails to delete from the suppression list.
-    internal init(deleteAll: Bool?, emails: [String]?) {
+    internal init(path: String? = nil, deleteAll: Bool?, emails: [String]?) {
         self.deleteAll = deleteAll
         self.emails = emails
-        super.init(method: .DELETE, contentType: .json, path: self.path)
+        super.init(method: .DELETE, contentType: .json, path: path ?? "/")
     }
     
     /// Initializes the request with an array of email addresses to delete

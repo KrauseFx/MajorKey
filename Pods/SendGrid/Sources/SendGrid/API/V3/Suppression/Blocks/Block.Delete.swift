@@ -51,14 +51,26 @@ public extension Block {
         
         // MARK: - Properties
         //======================================================================
-        
-        /// The path for the blocks API
-        override var path: String { return "/v3/suppression/blocks" }
-        
+                
         /// Returns a request that will delete *all* the entries on your block
         /// list.
         public static var all: Block.Delete {
             return Block.Delete(deleteAll: true, emails: nil)
+        }
+        
+        
+        // MARK: - Initialization
+        //=========================================================================
+        
+        /// Private initializer to set all the required properties.
+        ///
+        /// - Parameters:
+        ///   - path:       The path for the request's API endpoint.
+        ///   - deleteAll:  A `Bool` indicating if all the events on the suppression
+        ///                 list should be deleted.
+        ///   - emails:     An array of emails to delete from the suppression list.
+        override init(path: String? = nil, deleteAll: Bool?, emails: [String]?) {
+            super.init(path: "/v3/suppression/blocks", deleteAll: deleteAll, emails: emails)
         }
         
     }

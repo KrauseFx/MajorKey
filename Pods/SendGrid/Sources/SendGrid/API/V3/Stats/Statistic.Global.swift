@@ -49,11 +49,6 @@ public extension Statistic {
         /// The format used for dates.
         internal let dateFormat: String
         
-        /// The path for the endpoint.
-        internal var path: String {
-            return "/v3/stats"
-        }
-        
         /// The query items generated from the various properties.
         internal var queryItems: [URLQueryItem] {
             let formatter = DateFormatter()
@@ -77,7 +72,7 @@ public extension Statistic {
         ///   - startDate:      The starting date of the statistics to retrieve.
         ///   - endDate:        The end date of the statistics to retrieve.
         ///   - aggregatedBy:   Indicates how the statistics should be grouped.
-        public init(startDate: Date, endDate: Date? = nil, aggregatedBy: Statistic.Aggregation? = nil) {
+        internal init(path: String, startDate: Date, endDate: Date? = nil, aggregatedBy: Statistic.Aggregation? = nil) {
             self.startDate = startDate
             self.endDate = endDate
             self.aggregatedBy = aggregatedBy
@@ -88,11 +83,22 @@ public extension Statistic {
             super.init(
                 method: .GET,
                 contentType: .formUrlEncoded,
-                path: self.path,
+                path: path,
                 encoding: EncodingStrategy(dates: .formatted(formatter), data: .base64),
                 decoding: DecodingStrategy(dates: .formatted(formatter), data: .base64)
             )
             self.endpoint?.queryItems = self.queryItems
+        }
+        
+        /// Initializes the request with a start date, as well as an end date and/or
+        /// aggregation method.
+        ///
+        /// - Parameters:
+        ///   - startDate:      The starting date of the statistics to retrieve.
+        ///   - endDate:        The end date of the statistics to retrieve.
+        ///   - aggregatedBy:   Indicates how the statistics should be grouped.
+        public convenience init(startDate: Date, endDate: Date? = nil, aggregatedBy: Statistic.Aggregation? = nil) {
+            self.init(path: "/v3/stats", startDate: startDate, endDate: endDate, aggregatedBy: aggregatedBy)
         }
         
         

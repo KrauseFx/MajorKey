@@ -106,7 +106,6 @@
 				CA4983A21FCB8D8A0076BD21 /* Frameworks */,
 				CA4983A31FCB8D8A0076BD21 /* Resources */,
 				5A338974D33094411D280D1B /* [CP] Embed Pods Frameworks */,
-				E47365A36BD4C9E3227E1139 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,21 +201,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Major Key/Pods-Major Key-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E47365A36BD4C9E3227E1139 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Major Key/Pods-Major Key-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

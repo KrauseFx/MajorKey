@@ -8,6 +8,7 @@
 import Foundation
 
 public extension ClickTracking {
+    /// :nodoc:
     @available(*, deprecated, renamed: "init(section:)")
     public init(enable: Bool, enablePlainText: Bool? = nil) {
         self.enable = enable

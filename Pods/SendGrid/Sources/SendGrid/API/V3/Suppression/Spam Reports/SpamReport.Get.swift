@@ -84,8 +84,15 @@ public extension SpamReport {
     /// ```
     public class Get: SuppressionListReader<SpamReport> {
         
-        /// The path to the spam reports API.
-        override var path: String { return "/v3/suppression/spam_reports" }
+        override init(path: String?, email: String?, start: Date?, end: Date?, page: Page?) {
+            super.init(
+                path: "/v3/suppression/spam_reports",
+                email: email,
+                start: start,
+                end: end,
+                page: page
+            )
+        }
         
     }
     

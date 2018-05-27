@@ -42,7 +42,7 @@ public extension Statistic {
         public let categories: [String]
         
         /// The path for the global unsubscribe endpoint.
-        override internal var path: String { return "/v3/categories/stats" }
+        fileprivate static let path: String = "/v3/categories/stats"
         
         /// The query parameters used in the request.
         override internal var queryItems: [URLQueryItem] {
@@ -62,7 +62,7 @@ public extension Statistic {
         ///   - categories:     An array of categories to retrieve stats for.
         public init(startDate: Date, endDate: Date? = nil, aggregatedBy: Statistic.Aggregation? = nil, categories: [String]) {
             self.categories = categories
-            super.init(startDate: startDate, endDate: endDate, aggregatedBy: aggregatedBy)
+            super.init(path: Statistic.Category.path, startDate: startDate, endDate: endDate, aggregatedBy: aggregatedBy)
         }
         
         /// Initializes the request with a start date and categories, as well as

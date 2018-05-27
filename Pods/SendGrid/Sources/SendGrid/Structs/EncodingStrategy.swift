@@ -33,17 +33,3 @@ public struct EncodingStrategy {
     }
     
 }
-
-#if os(Linux)
-    /// :nodoc:
-    /// For some reason, on macOS we have
-    /// `JSONEncoder.DataEncodingStrategy.base64` and on Linux we have
-    /// `JSONEncoder.DataEncodingStrategy.base64Encode`, so this extension is to
-    /// add a `.base64` option for Linux.
-    ///
-    /// This issue was fixed in https://github.com/apple/swift-corelibs-foundation/pull/1219,
-    /// however it didn't make the 4.0 release.
-    extension JSONEncoder.DataEncodingStrategy {
-        public static let base64 = JSONEncoder.DataEncodingStrategy.base64Encode
-    }
-#endif

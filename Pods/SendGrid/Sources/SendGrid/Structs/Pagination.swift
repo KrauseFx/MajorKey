@@ -67,7 +67,7 @@ public struct Pagination {
                 else { return nil }
             return String(str[matchRange])
         }
-        let rawPages = link.split(separator: ",").flatMap { (item) -> (String, Page)? in
+        let rawPages = link.split(separator: ",").compactMap { (item) -> (String, Page)? in
             let partial = String(item)
             guard let name = first(match: "(?<=rel=\")\\S+(?=\")", in: partial),
                 let limitStr = first(match: "(?<=limit=)\\d+", in: partial),

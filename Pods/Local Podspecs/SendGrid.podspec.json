@@ -1,6 +1,6 @@
 {
   "name": "SendGrid",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "summary": "A library that allows you to easily make SendGrid V3 API calls.",
   "description": "A library that allows you to easily make API calls via SendGrid's V3 API.",
   "homepage": "https://github.com/scottkawai/sendgrid-swift",
@@ -15,7 +15,7 @@
   },
   "source": {
     "git": "https://github.com/scottkawai/sendgrid-swift.git",
-    "tag": "1.0.0"
+    "tag": "1.1.0"
   },
   "source_files": "Sources/**/*.swift"
 }

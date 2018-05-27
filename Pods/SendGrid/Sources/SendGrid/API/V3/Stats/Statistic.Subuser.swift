@@ -42,7 +42,7 @@ public extension Statistic {
         public let subusers: [String]
         
         /// The path for the global unsubscribe endpoint.
-        override internal var path: String { return "/v3/subusers/stats" }
+        fileprivate static let path: String = "/v3/subusers/stats"
         
         /// The query parameters used in the request.
         override internal var queryItems: [URLQueryItem] {
@@ -63,7 +63,7 @@ public extension Statistic {
         ///                     for (max 10).
         public init(startDate: Date, endDate: Date? = nil, aggregatedBy: Statistic.Aggregation? = nil, subusers: [String]) {
             self.subusers = subusers
-            super.init(startDate: startDate, endDate: endDate, aggregatedBy: aggregatedBy)
+            super.init(path: Statistic.Subuser.path, startDate: startDate, endDate: endDate, aggregatedBy: aggregatedBy)
         }
         
         /// Initializes the request with a start date and subusers, as well as
@@ -90,7 +90,7 @@ public extension Statistic {
         ///                     stats for (max 10).
         public init(startDate: Date, endDate: Date? = nil, aggregatedBy: Statistic.Aggregation? = nil, subusers: [SendGrid.Subuser]) {
             self.subusers = subusers.map { $0.username }
-            super.init(startDate: startDate, endDate: endDate, aggregatedBy: aggregatedBy)
+            super.init(path: Statistic.Subuser.path, startDate: startDate, endDate: endDate, aggregatedBy: aggregatedBy)
         }
         
         /// Initializes the request with a start date and subusers, as well as

@@ -83,8 +83,15 @@ public extension Bounce {
     /// ```
     public class Get: SuppressionListReader<Bounce> {
         
-        /// The path for the bounces API endpoint.
-        override var path: String { return "/v3/suppression/bounces" }
+        override init(path: String?, email: String?, start: Date?, end: Date?, page: Page?) {
+            super.init(
+                path: "/v3/suppression/bounces",
+                email: email,
+                start: start,
+                end: end,
+                page: page
+            )
+        }
         
     }
     

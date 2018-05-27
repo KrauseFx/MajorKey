@@ -25,7 +25,7 @@ public extension GlobalUnsubscribe {
     ///     print(error)
     /// }
     /// ```
-    public class Add: Request<[String:Any]>, AutoEncodable {
+    public class Add: Request<JSONValue>, AutoEncodable {
         
         // MARK: - Properties
         //=========================================================================

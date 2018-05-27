@@ -53,13 +53,25 @@ public extension Bounce {
         // MARK: - Properties
         //======================================================================
         
-        /// The path for the bounces API
-        override var path: String { return "/v3/suppression/bounces" }
-        
         /// Returns a request that will delete *all* the entries on your bounce
         /// list.
         public static var all: Bounce.Delete {
             return Bounce.Delete(deleteAll: true, emails: nil)
+        }
+        
+        
+        // MARK: - Initialization
+        //=========================================================================
+        
+        /// Private initializer to set all the required properties.
+        ///
+        /// - Parameters:
+        ///   - path:       The path for the request's API endpoint.
+        ///   - deleteAll:  A `Bool` indicating if all the events on the suppression
+        ///                 list should be deleted.
+        ///   - emails:     An array of emails to delete from the suppression list.
+        override init(path: String? = nil, deleteAll: Bool?, emails: [String]?) {
+            super.init(path: "/v3/suppression/bounces", deleteAll: deleteAll, emails: emails)
         }
         
     }

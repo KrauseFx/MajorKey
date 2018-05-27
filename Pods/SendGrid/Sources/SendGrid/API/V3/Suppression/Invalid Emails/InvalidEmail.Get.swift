@@ -79,8 +79,15 @@ public extension InvalidEmail {
     /// ```
     public class Get: SuppressionListReader<InvalidEmail> {
         
-        /// The path to the spam reports API.
-        override var path: String { return "/v3/suppression/invalid_emails" }
+        override init(path: String?, email: String?, start: Date?, end: Date?, page: Page?) {
+            super.init(
+                path: "/v3/suppression/invalid_emails",
+                email: email,
+                start: start,
+                end: end,
+                page: page
+            )
+        }
         
     }
     

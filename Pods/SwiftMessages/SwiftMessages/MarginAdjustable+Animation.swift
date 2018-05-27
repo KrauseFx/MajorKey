@@ -10,31 +10,51 @@ import UIKit
 
 public extension MarginAdjustable where Self: UIView {
 
-    public func topAdjustment(container: UIView, context: AnimationContext) -> CGFloat {
+    public func defaultMarginAdjustment(context: AnimationContext) -> UIEdgeInsets {
+        return UIEdgeInsets(top: topAdjustment(context: context), left: 0, bottom: bottomAdjustment(context: context), right: 0)
+    }
+
+    private func topAdjustment(context: AnimationContext) -> CGFloat {        
         var top: CGFloat = 0
-        top += bounceAnimationOffset
         if !context.safeZoneConflicts.isDisjoint(with: [.sensorNotch, .statusBar]) {
-            if #available(iOS 11, *), container.safeAreaInsets.top > 0  {
-                // Linear formula based on:
-                // iPhone 8 - 20pt top safe area with 0pt adjustment
-                // iPhone X - 44pt top safe area with -6pt adjustment
-                top -= 6 * (container.safeAreaInsets.top - 20) / (44 - 20)
+            #if SWIFTMESSAGES_APP_EXTENSIONS
+            let application: UIApplication? = nil
+            #else
+            let application: UIApplication? = UIApplication.shared
+            #endif
+            if #available(iOS 11, *)  {
+                do {
+                    // To accommodate future safe areas, using a linear formula based on
+                    // two data points:
+                    // iPhone 8 - 20pt top safe area needs 0pt adjustment
+                    // iPhone X - 44pt top safe area needs -6pt adjustment
+                    top -= 6 * (safeAreaInsets.top - 20) / (44 - 20)
+                }
                 top += safeAreaTopOffset
-            } else {
-                top += statusBarOffset
+            } else if let app = application, app.statusBarOrientation == .portrait || app.statusBarOrientation == .portraitUpsideDown {
+                let frameInWindow = convert(bounds, to: window)
+                if frameInWindow.minY == 0 {
+                    top += statusBarOffset
+                }
             }
-        }
-        if #available(iOS 11, *), !context.safeZoneConflicts.isDisjoint(with: .coveredStatusBar) {
+        } else if #available(iOS 11, *), !context.safeZoneConflicts.isDisjoint(with: .overStatusBar) {
             top -= safeAreaInsets.top
         }
         return top
     }
 
-    public func bottomAdjustment(container: UIView, context: AnimationContext) -> CGFloat {
+    private func bottomAdjustment(context: AnimationContext) -> CGFloat {
         var bottom: CGFloat = 0
-        bottom += bounceAnimationOffset
         if !context.safeZoneConflicts.isDisjoint(with: [.homeIndicator]) {
-            if #available(iOS 11, *), container.safeAreaInsets.bottom > 0  {
+            if #available(iOS 11, *), safeAreaInsets.bottom > 0  {
+                do {
+                    // This adjustment was added to fix a layout issue with iPhone X in
+                    // landscape mode. Using a linear formula based on two data points to help
+                    // future proof against future safe areas:
+                    // iPhone X portrait: 34pt bottom safe area needs 0pt adjustment
+                    // iPhone X landscape: 21pt bottom safe area needs 12pt adjustment
+                    bottom -= 12 * (safeAreaInsets.bottom - 34) / (34 - 21)
+                }
                 bottom += safeAreaBottomOffset
             }
         }

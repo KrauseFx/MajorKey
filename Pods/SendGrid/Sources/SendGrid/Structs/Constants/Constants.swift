@@ -18,7 +18,7 @@ struct Constants {
     static let ApiHost: String = "https://api.sendgrid.com/"
     
     /// The version number of the library.
-    static let Version: String = "1.0.0"
+    static let Version: String = "1.1.0"
     
     /// The upper limit to the number of personalizations allowed in an email.
     static let PersonalizationLimit: Int = 1000

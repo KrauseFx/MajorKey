@@ -96,6 +96,7 @@ open class Session {
         // Get the NSURLRequest
         var payload = try request.generateUrlRequest()
         payload.addValue(auth.authorizationHeader, forHTTPHeaderField: "Authorization")
+        payload.addValue("sendgrid/\(Constants.Version);swift", forHTTPHeaderField: "User-Agent")
         if let sub = self.onBehalfOf {
             if request.supportsImpersonation {
                 payload.addValue(sub, forHTTPHeaderField: "On-behalf-of")
