@@ -1,6 +1,10 @@
 desc "Push a new release build to the App Store"
 lane :release do
   # match(type: "appstore")
-  # build_app(workspace: "Major Key.xcworkspace", scheme: "Major Key")
+  appicon(
+    appicon_devices: [:iphone, :ios_marketing],
+    appicon_path: "Major Key/Assets.xcassets"
+  )
+  build_app(workspace: "Major Key.xcworkspace", scheme: "Major Key")
   upload_to_app_store
 end
