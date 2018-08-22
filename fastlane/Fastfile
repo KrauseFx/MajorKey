@@ -1,0 +1,6 @@
+desc "Push a new release build to the App Store"
+lane :release do
+  # match(type: "appstore")
+  # build_app(workspace: "Major Key.xcworkspace", scheme: "Major Key")
+  upload_to_app_store
+end
