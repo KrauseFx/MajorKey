@@ -54,7 +54,7 @@ All with no waiting times or animations.
 ## Use the app
 
 - Clone the repo
-- You don't need a backend, just create a free SendGrid account
-- Get your SendGrid API key and add it to `ViewController.swift`
+- You don't need a backend, just create a free [MailJet](https://mailjet.com) account
+- Get your [MailJet](https://mailjet.com) API key and add it to `ViewController.swift`
 - Add your email address to `ViewController.swift`
 - Install the app on your phone

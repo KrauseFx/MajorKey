@@ -6,6 +6,5 @@ target 'Major Key' do
   use_frameworks!
 
   # Pods for Major Key
-  pod 'SendGrid', :git => 'https://github.com/scottkawai/sendgrid-swift.git'
   pod 'SwiftMessages'
 end
