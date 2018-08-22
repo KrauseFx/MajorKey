@@ -1,30 +1,18 @@
 PODS:
-  - SendGrid (1.1.0)
   - SwiftMessages (4.1.4):
     - SwiftMessages/App (= 4.1.4)
   - SwiftMessages/App (4.1.4)
 
 DEPENDENCIES:
-  - SendGrid (from `https://github.com/scottkawai/sendgrid-swift.git`)
   - SwiftMessages
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - SwiftMessages
 
-EXTERNAL SOURCES:
-  SendGrid:
-    :git: https://github.com/scottkawai/sendgrid-swift.git
-
-CHECKOUT OPTIONS:
-  SendGrid:
-    :commit: f83833cd2ea00e07de3d851f8f77b5baacee689b
-    :git: https://github.com/scottkawai/sendgrid-swift.git
-
 SPEC CHECKSUMS:
-  SendGrid: 1b2a3beb1f2b6df0ffba83c6d1b1f4587a51def0
   SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
 
-PODFILE CHECKSUM: a7d03ea8e81b836a9e1995321c7ce4a7940020f5
+PODFILE CHECKSUM: 27ed41a4c401f905532e70edaee165e1812b0f40
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
