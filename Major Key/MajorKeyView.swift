@@ -11,6 +11,7 @@ import UIKit
 protocol MajorKeyViewDelegate: class {
     func didPressKeyButton(button: UIButton)
     func didPressPackageButton(button: UIButton)
+    func didPressSettingsButton(button: UIButton?)
 }
 
 class MajorKeyView: UIView {
@@ -53,5 +54,8 @@ class MajorKeyView: UIView {
 
     @IBAction func didPressPackageButton(_ sender: UIButton) {
         delegate?.didPressPackageButton(button: sender)
+    }
+    @IBAction func didPressSettingsButton(_ sender: UIButton) {
+        delegate?.didPressSettingsButton(button: sender);
     }
 }

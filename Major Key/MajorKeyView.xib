@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,7 +28,7 @@
                         <action selector="didPressKeyButton:" destination="-1" eventType="touchUpInside" id="uMY-TZ-psu"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdE-nF-Fsg">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdE-nF-Fsg">
                     <rect key="frame" x="262" y="0.0" width="105" height="92"/>
                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                     <state key="normal" title="📦"/>
@@ -36,14 +36,27 @@
                         <action selector="didPressPackageButton:" destination="-1" eventType="touchUpInside" id="GGl-NO-wrr"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsl-fy-Qim">
+                    <rect key="frame" x="0.0" y="0.0" width="105" height="92"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <state key="normal" title="⚙️"/>
+                    <connections>
+                        <action selector="didPressSettingsButton:" destination="-1" eventType="touchUpInside" id="gb3-p4-fOo"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="gmc-ia-yx0" firstAttribute="width" secondItem="CdE-nF-Fsg" secondAttribute="width" id="FtB-8J-GW6"/>
+                <constraint firstItem="qsl-fy-Qim" firstAttribute="top" secondItem="CdE-nF-Fsg" secondAttribute="top" id="HGQ-Wm-89J"/>
+                <constraint firstItem="qsl-fy-Qim" firstAttribute="width" secondItem="CdE-nF-Fsg" secondAttribute="width" id="La7-Rk-X8F"/>
                 <constraint firstItem="gmc-ia-yx0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QbA-HW-lBA"/>
                 <constraint firstItem="gmc-ia-yx0" firstAttribute="height" secondItem="CdE-nF-Fsg" secondAttribute="height" id="SYT-7g-pUV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qsl-fy-Qim" secondAttribute="trailing" constant="270" id="T9g-eL-UVg"/>
                 <constraint firstItem="gmc-ia-yx0" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Vse-Z9-StL"/>
+                <constraint firstItem="qsl-fy-Qim" firstAttribute="bottom" secondItem="CdE-nF-Fsg" secondAttribute="bottom" id="Y06-cP-oAS"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CdE-nF-Fsg" secondAttribute="trailing" constant="8" id="oaY-Po-hUQ"/>
+                <constraint firstItem="qsl-fy-Qim" firstAttribute="height" secondItem="CdE-nF-Fsg" secondAttribute="height" id="sXC-zB-SYz"/>
                 <constraint firstItem="CdE-nF-Fsg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="v1M-pd-KHH"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
