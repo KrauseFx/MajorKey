@@ -5,7 +5,9 @@ lane :release do
     appicon_devices: [:iphone, :ios_marketing],
     appicon_path: "Major Key/Assets.xcassets"
   )
+
   increment_build_number
-  build_app(workspace: "Major Key.xcworkspace", scheme: "Major Key")
-  upload_to_app_store(submit_for_review: true)
+  build_app(scheme: "Major Key")
+
+  upload_to_app_store(submit_for_review: true, force: true, skip_metadata: true)
 end
