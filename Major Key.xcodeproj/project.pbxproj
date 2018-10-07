@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B84B043C88B90AF6796B9AD6 /* Pods_Major_Key.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7D06D34549E267256245F8 /* Pods_Major_Key.framework */; };
+		CA105C6D212E280800A10419 /* MajorKeyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA105C6C212E280800A10419 /* MajorKeyUITests.swift */; };
+		CA105C75212E281000A10419 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA105C74212E281000A10419 /* SnapshotHelper.swift */; };
 		CA4983A91FCB8D8A0076BD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4983A81FCB8D8A0076BD21 /* AppDelegate.swift */; };
 		CA4983AB1FCB8D8A0076BD21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4983AA1FCB8D8A0076BD21 /* ViewController.swift */; };
 		CA4983AE1FCB8D8A0076BD21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4983AC1FCB8D8A0076BD21 /* Main.storyboard */; };
@@ -17,10 +19,24 @@
 		CDA201FD1FCF375C00646875 /* MajorKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA201FC1FCF375C00646875 /* MajorKeyView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CA105C6F212E280800A10419 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA49839D1FCB8D8A0076BD21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA4983A41FCB8D8A0076BD21;
+			remoteInfo = "Major Key";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1FEFDD9B6786AD868BF47340 /* Pods-Major Key.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Major Key.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Major Key/Pods-Major Key.debug.xcconfig"; sourceTree = "<group>"; };
 		5DDC55DC35E51319D901146D /* Pods-Major Key.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Major Key.release.xcconfig"; path = "Pods/Target Support Files/Pods-Major Key/Pods-Major Key.release.xcconfig"; sourceTree = "<group>"; };
 		7C7D06D34549E267256245F8 /* Pods_Major_Key.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Major_Key.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA105C6A212E280800A10419 /* MajorKeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MajorKeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA105C6C212E280800A10419 /* MajorKeyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorKeyUITests.swift; sourceTree = "<group>"; };
+		CA105C6E212E280800A10419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA105C74212E281000A10419 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		CA4983A51FCB8D8A0076BD21 /* Major Key.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Major Key.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4983A81FCB8D8A0076BD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA4983AA1FCB8D8A0076BD21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +49,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CA105C67212E280800A10419 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA4983A21FCB8D8A0076BD21 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,10 +84,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CA105C6B212E280800A10419 /* MajorKeyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CA105C6C212E280800A10419 /* MajorKeyUITests.swift */,
+				CA105C74212E281000A10419 /* SnapshotHelper.swift */,
+				CA105C6E212E280800A10419 /* Info.plist */,
+			);
+			path = MajorKeyUITests;
+			sourceTree = "<group>";
+		};
 		CA49839C1FCB8D8A0076BD21 = {
 			isa = PBXGroup;
 			children = (
 				CA4983A71FCB8D8A0076BD21 /* Major Key */,
+				CA105C6B212E280800A10419 /* MajorKeyUITests */,
 				CA4983A61FCB8D8A0076BD21 /* Products */,
 				C4F936AC3A01B6F5B87F5012 /* Pods */,
 				57E27A6C4595951215DED59A /* Frameworks */,
@@ -75,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				CA4983A51FCB8D8A0076BD21 /* Major Key.app */,
+				CA105C6A212E280800A10419 /* MajorKeyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +132,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CA105C69212E280800A10419 /* MajorKeyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA105C71212E280800A10419 /* Build configuration list for PBXNativeTarget "MajorKeyUITests" */;
+			buildPhases = (
+				CA105C66212E280800A10419 /* Sources */,
+				CA105C67212E280800A10419 /* Frameworks */,
+				CA105C68212E280800A10419 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA105C70212E280800A10419 /* PBXTargetDependency */,
+			);
+			name = MajorKeyUITests;
+			productName = MajorKeyUITests;
+			productReference = CA105C6A212E280800A10419 /* MajorKeyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		CA4983A41FCB8D8A0076BD21 /* Major Key */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA4983B71FCB8D8A0076BD21 /* Build configuration list for PBXNativeTarget "Major Key" */;
@@ -122,10 +175,15 @@
 		CA49839D1FCB8D8A0076BD21 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Felix Krause";
 				TargetAttributes = {
+					CA105C69212E280800A10419 = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CA4983A41FCB8D8A0076BD21;
+					};
 					CA4983A41FCB8D8A0076BD21 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Manual;
@@ -146,11 +204,19 @@
 			projectRoot = "";
 			targets = (
 				CA4983A41FCB8D8A0076BD21 /* Major Key */,
+				CA105C69212E280800A10419 /* MajorKeyUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CA105C68212E280800A10419 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA4983A31FCB8D8A0076BD21 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,6 +270,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CA105C66212E280800A10419 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA105C6D212E280800A10419 /* MajorKeyUITests.swift in Sources */,
+				CA105C75212E281000A10419 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA4983A11FCB8D8A0076BD21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,6 +290,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA105C70212E280800A10419 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA4983A41FCB8D8A0076BD21 /* Major Key */;
+			targetProxy = CA105C6F212E280800A10419 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CA4983AC1FCB8D8A0076BD21 /* Main.storyboard */ = {
@@ -236,6 +319,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CA105C72212E280800A10419 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N8X438SEU2;
+				INFOPLIST_FILE = MajorKeyUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.krausefx.MajorKeyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1da6a955-6cda-4c24-a781-782d3854d460";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Major Key";
+			};
+			name = Debug;
+		};
+		CA105C73212E280800A10419 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N8X438SEU2;
+				INFOPLIST_FILE = MajorKeyUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.krausefx.MajorKeyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1da6a955-6cda-4c24-a781-782d3854d460";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Major Key";
+			};
+			name = Release;
+		};
 		CA4983B51FCB8D8A0076BD21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -348,16 +471,14 @@
 			baseConfigurationReference = 1FEFDD9B6786AD868BF47340 /* Pods-Major Key.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = N8X438SEU2;
 				INFOPLIST_FILE = "Major Key/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.majorkey.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1da6a955-6cda-4c24-a781-782d3854d460";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore me.majorkey.app";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development me.majorkey.app";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -369,16 +490,14 @@
 			baseConfigurationReference = 5DDC55DC35E51319D901146D /* Pods-Major Key.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = N8X438SEU2;
 				INFOPLIST_FILE = "Major Key/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.majorkey.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1da6a955-6cda-4c24-a781-782d3854d460";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore me.majorkey.app";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development me.majorkey.app";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -388,6 +507,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CA105C71212E280800A10419 /* Build configuration list for PBXNativeTarget "MajorKeyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA105C72212E280800A10419 /* Debug */,
+				CA105C73212E280800A10419 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CA4983A01FCB8D8A0076BD21 /* Build configuration list for PBXProject "Major Key" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
