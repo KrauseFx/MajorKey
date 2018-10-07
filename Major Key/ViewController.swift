@@ -147,6 +147,8 @@ class ViewController: UIViewController, UITextViewDelegate {
         
         alert.addTextField { (textField) in
             textField.placeholder = "Your email address"
+            textField.keyboardType = .emailAddress
+            textField.textContentType = UITextContentType.emailAddress
         }
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
