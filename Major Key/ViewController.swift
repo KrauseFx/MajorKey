@@ -54,7 +54,9 @@ class ViewController: UIViewController, UITextViewDelegate {
         oldKeys!.append(text)
         UserDefaults.standard.set(oldKeys, forKey: defaultsForHistory)
         
-        triggerEmail(text: text)  
+        if (text.count > 0) {
+            triggerEmail(text: text)
+        }
     }
     
     func showAlert(title: String, body: String, theme: Theme) {
