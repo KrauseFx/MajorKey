@@ -1,1 +1,1 @@
-
+The app is simple, and does a single thing: send an email to yourself. This is extremely useful if you follow the inbox zero approach. The only setting the app needs is to define what email address to send your notes to.

@@ -10,3 +10,5 @@ You want to jot down that thought as quickly as possible so you don't forget, an
 Within a second you'll have the note in your email inbox. Extremely useful if you follow the Inbox Zero approach.
 
 All with no waiting times or animations.
+
+This app does exactly that: a single screen that allows you type in a note, and send it to your inbox, as fast & efficient as it could be.
