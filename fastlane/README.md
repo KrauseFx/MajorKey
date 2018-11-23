@@ -15,6 +15,13 @@ Install _fastlane_ using
 or alternatively using `brew cask install fastlane`
 
 # Available Actions
+### generate_app_icon
+```
+fastlane generate_app_icon
+```
+Generate the app icon in all sizes, as Xcode
+
+still doesn't do it for you for some reason
 ### release
 ```
 fastlane release
