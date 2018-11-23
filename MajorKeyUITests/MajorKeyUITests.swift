@@ -23,9 +23,13 @@ class MajorKeyUITests: XCTestCase {
     }
     
     func testLaunch() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        snapshot("0Launch")
+        let app = XCUIApplication()
+        let alert = app.alerts["Choose your email address"]
+        snapshot("02Settings")
+        
+        alert.textFields.allElementsBoundByIndex.first?.typeText("your@email.com")
+        alert.buttons.allElementsBoundByIndex.first?.tap()
+        snapshot("01Main")
     }
     
 }
