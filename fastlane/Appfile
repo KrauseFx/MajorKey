@@ -1,5 +1,0 @@
-app_identifier("me.majorkey.app") # The bundle identifier of your app
-apple_id("apple@krausefx.com") # Your Apple email address
-
-itc_team_id("118119178") # App Store Connect Team ID
-team_id("N8X438SEU2") # Developer Portal Team ID
