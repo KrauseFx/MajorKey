@@ -86,6 +86,9 @@ class ViewController: UIViewController, UITextViewDelegate {
         let base64LoginString = loginData.base64EncodedString()
         request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
         
+        // Subject allows 255 chars maximum
+        let truncatedTextForSubject = text.suffix(200)
+        
         let emailAddress = UserDefaults.standard.string(forKey: defaultsForEmail)!
         let postContent = [
             "Messages": [
@@ -100,7 +103,7 @@ class ViewController: UIViewController, UITextViewDelegate {
                             "Name": "Name"
                         ]
                     ],
-                    "Subject": "[Major 🔑] \(text)",
+                    "Subject": "[Major 🔑] \(truncatedTextForSubject)",
                     "TextPart": text
                 ]
             ]
