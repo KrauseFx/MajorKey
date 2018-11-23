@@ -1,7 +1,7 @@
 PODS:
-  - SwiftMessages (4.1.4):
-    - SwiftMessages/App (= 4.1.4)
-  - SwiftMessages/App (4.1.4)
+  - SwiftMessages (6.0.1):
+    - SwiftMessages/App (= 6.0.1)
+  - SwiftMessages/App (6.0.1)
 
 DEPENDENCIES:
   - SwiftMessages
@@ -11,7 +11,7 @@ SPEC REPOS:
     - SwiftMessages
 
 SPEC CHECKSUMS:
-  SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
+  SwiftMessages: 42ed7b6e1f2f1ead9ee667dc61a0ae87e4f49570
 
 PODFILE CHECKSUM: 27ed41a4c401f905532e70edaee165e1812b0f40
 
