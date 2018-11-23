@@ -12,8 +12,6 @@ lane :release do
   match(type: "appstore")
   generate_app_icon
 
-  snapshot
-
   increment_build_number
   build_app(scheme: "Major Key")
 

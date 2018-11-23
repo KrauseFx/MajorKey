@@ -1,4 +1,4 @@
 languages(["en-US"])
 scheme("MajorKeyUITests")
-clear_previous_screenshots(true)
+# clear_previous_screenshots(true)
 reinstall_app(true)
