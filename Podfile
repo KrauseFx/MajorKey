@@ -8,3 +8,11 @@ target 'Major Key' do
   # Pods for Major Key
   pod 'SwiftMessages', :inhibit_warnings => true
 end
+
+target 'MajorKeyActionExtension' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Major Key
+  pod 'SwiftMessages/AppExtension', :inhibit_warnings => true
+end

@@ -2,9 +2,11 @@ PODS:
   - SwiftMessages (6.0.1):
     - SwiftMessages/App (= 6.0.1)
   - SwiftMessages/App (6.0.1)
+  - SwiftMessages/AppExtension (6.0.1)
 
 DEPENDENCIES:
   - SwiftMessages
+  - SwiftMessages/AppExtension
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -13,6 +15,6 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   SwiftMessages: 42ed7b6e1f2f1ead9ee667dc61a0ae87e4f49570
 
-PODFILE CHECKSUM: 778997de510b13aa69193cb143495c3112b035c4
+PODFILE CHECKSUM: f06d3e98e1441071f4fbb1bbf3be337f004f6db9
 
 COCOAPODS: 1.5.3

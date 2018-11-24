@@ -10,16 +10,14 @@ import UIKit
 import SwiftMessages
 
 class ViewController: UIViewController {
+
+    let apiClient: APIClient = MailJetAPIClient()
+
     @IBOutlet weak var majorTextView: UITextView!
-    
-    let apiKey = ""
-    let apiSecret = ""
-    
-    let defaultsForHistory = "MajorKeys"
-    let defaultsForEmail = "MajorKeyEmail"
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.majorTextView.text = ""
         self.majorTextView.delegate = self
 
@@ -30,9 +28,10 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
         self.majorTextView.becomeFirstResponder()
         
-        if UserDefaults.standard.string(forKey: defaultsForEmail) == nil {
+        if UserDefaults.shared.emailAddress == nil {
             self.didPressSettingsButton(button: nil)
         }
     }
@@ -42,9 +41,9 @@ class ViewController: UIViewController {
             return
         }
 
-        var oldKeys = UserDefaults.standard.stringArray(forKey: defaultsForHistory) ?? []
+        var oldKeys = UserDefaults.shared.history
         oldKeys.append(text)
-        UserDefaults.standard.set(oldKeys, forKey: defaultsForHistory)
+        UserDefaults.shared.history = oldKeys
 
         triggerEmail(text: text)
     }
@@ -64,75 +63,24 @@ class ViewController: UIViewController {
     }
     
     func triggerEmail(text: String) {
-        let url = URL(string: "https://api.mailjet.com/v3.1/send")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        // Auth code
-        // code via https://stackoverflow.com/questions/24379601/how-to-make-an-http-request-basic-auth-in-swift
-        let loginString = String(format: "%@:%@", apiKey, apiSecret)
-        let loginData = loginString.data(using: String.Encoding.utf8)!
-        let base64LoginString = loginData.base64EncodedString()
-        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
-        
-        // Subject allows 255 chars maximum
-        let truncatedTextForSubject = text.suffix(200)
-        
-        let emailAddress = UserDefaults.standard.string(forKey: defaultsForEmail)!
-        let postContent = [
-            "Messages": [
-                [
-                    "From": [
-                        "Email": "new@MajorKey.me",
-                        "Name": "New MajorKey"
-                    ],
-                    "To": [
-                        [
-                            "Email": emailAddress,
-                            "Name": "Name"
-                        ]
-                    ],
-                    "Subject": "[Major 🔑] \(truncatedTextForSubject)",
-                    "TextPart": text
-                ]
-            ]
-        ]
-        do {
-            let postString = try JSONSerialization.data(withJSONObject: postContent, options: .prettyPrinted)
-            
-            // Request body
-            request.httpBody = postString //postString.data(using: .utf8)
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                DispatchQueue.main.async {
-                    guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                        print("error=\(String(describing: error))")
-                        self.showAlert(title: "Error", body: String(describing: error), theme: .error);
-                        return
-                    }
-
-                    if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
-                        print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                        print("response = \(String(describing: response) )")
-                        self.showAlert(title: "Error", body: String(describing: response), theme: .error);
-                        return
-                    }
-
-                    let responseString = String(data: data, encoding: .utf8)
-                    print("responseString = \(String(describing: responseString))")
-                    self.showAlert(title: "Major Key", body: "Never forget dat major key", theme: .success);
-
-                    self.majorTextView.text = ""
+        self.apiClient.send(text: text) { (result) in
+            switch result {
+            case .success:
+                self.showAlert(title: "Major Key", body: "Never forget dat major key", theme: .success);
+                self.majorTextView.text = ""
+            case .failure(let error):
+                switch error {
+                case .networkError(let reason):
+                    self.showAlert(title: "Error", body: reason, theme: .error);
+                case .httpError(let reason):
+                    self.showAlert(title: "Error", body: reason, theme: .error);
                 }
             }
-            task.resume()
-        } catch {
-            print(error.localizedDescription)
         }
     }
 
     func didTapOldKeys() {
-        self.majorTextView.text = UserDefaults.standard.stringArray(forKey: defaultsForHistory)?.reversed().joined(separator: "\n")
+        self.majorTextView.text = UserDefaults.shared.history.reversed().joined(separator: "\n")
     }
     
     func didPressSettingsButton(message: String) {
@@ -146,7 +94,7 @@ class ViewController: UIViewController {
             textField.placeholder = "Your email address"
             textField.keyboardType = .emailAddress
             textField.textContentType = UITextContentType.emailAddress
-            textField.text = UserDefaults.standard.string(forKey: self.defaultsForEmail);
+            textField.text = UserDefaults.shared.emailAddress
         }
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
@@ -156,22 +104,23 @@ class ViewController: UIViewController {
             }
 
             if let text = textField.text, text.contains("@") {
-                UserDefaults.standard.set(text, forKey: self.defaultsForEmail)
+                UserDefaults.shared.emailAddress = text
             } else {
                 self.didPressSettingsButton(message: "Please enter a valid email address");
             }
         }))
         
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 }
 
 extension ViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n") {
-            self.didPressMajorKey()
-            return false
+          didPressMajorKey()
+          return false
         }
+
         return true
     }
 }
