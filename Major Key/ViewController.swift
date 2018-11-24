@@ -114,24 +114,24 @@ class ViewController: UIViewController, UITextViewDelegate {
             // Request body
             request.httpBody = postString //postString.data(using: .utf8)
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                    print("error=\(String(describing: error))")
-                    self.showAlert(title: "Error", body: String(describing: error), theme: .error);
-                    return
-                }
-                
-                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
-                    print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                    print("response = \(String(describing: response) )")
-                    self.showAlert(title: "Error", body: String(describing: response), theme: .error);
-                    return
-                }
-                
-                let responseString = String(data: data, encoding: .utf8)
-                print("responseString = \(String(describing: responseString))")
-                self.showAlert(title: "Major Key", body: "Never forget dat major key", theme: .success);
-                
                 DispatchQueue.main.async {
+                    guard let data = data, error == nil else {                                                 // check for fundamental networking error
+                        print("error=\(String(describing: error))")
+                        self.showAlert(title: "Error", body: String(describing: error), theme: .error);
+                        return
+                    }
+
+                    if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
+                        print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                        print("response = \(String(describing: response) )")
+                        self.showAlert(title: "Error", body: String(describing: response), theme: .error);
+                        return
+                    }
+
+                    let responseString = String(data: data, encoding: .utf8)
+                    print("responseString = \(String(describing: responseString))")
+                    self.showAlert(title: "Major Key", body: "Never forget dat major key", theme: .success);
+
                     self.majorTextView.text = ""
                 }
             }
