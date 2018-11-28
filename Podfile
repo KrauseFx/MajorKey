@@ -6,5 +6,5 @@ target 'Major Key' do
   use_frameworks!
 
   # Pods for Major Key
-  pod 'SwiftMessages'
+  pod 'SwiftMessages', :inhibit_warnings => true
 end
