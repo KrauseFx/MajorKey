@@ -9,7 +9,7 @@
 import UIKit
 import SwiftMessages
 
-class ViewController: UIViewController, UITextViewDelegate {
+class ViewController: UIViewController {
     @IBOutlet weak var majorTextView: UITextView!
     
     let apiKey = ""
@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITextViewDelegate {
 
         let majorView = MajorKeyView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 92))
         majorView.delegate = self
-        majorTextView.inputAccessoryView = majorView
+        self.majorTextView.inputAccessoryView = majorView
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,33 +37,23 @@ class ViewController: UIViewController, UITextViewDelegate {
         }
     }
 
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if (text == "\n") {
-            self.didPressMajorKey()
-            return false
-        }
-        return true
-    }
-
     func didPressMajorKey() {
-        let text = self.majorTextView.text!
-        var oldKeys = UserDefaults.standard.stringArray(forKey: defaultsForHistory)
-        if oldKeys == nil {
-            oldKeys = []
+        guard let text = self.majorTextView.text, text.count > 0 else {
+            return
         }
-        oldKeys!.append(text)
+
+        var oldKeys = UserDefaults.standard.stringArray(forKey: defaultsForHistory) ?? []
+        oldKeys.append(text)
         UserDefaults.standard.set(oldKeys, forKey: defaultsForHistory)
-        
-        if (text.count > 0) {
-            triggerEmail(text: text)
-        }
+
+        triggerEmail(text: text)
     }
     
     func showAlert(title: String, body: String, theme: Theme) {
         let view = MessageView.viewFromNib(layout: .cardView)
         view.configureTheme(theme)
         view.configureDropShadow()
-        view.button!.removeFromSuperview()
+        view.button?.removeFromSuperview()
         view.configureContent(title: title, body: body, iconText: "🔑")
         
         var config = SwiftMessages.Config()
@@ -160,16 +150,29 @@ class ViewController: UIViewController, UITextViewDelegate {
         }
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
-            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
-            let text = textField!.text!
-            if text.contains("@") {
-                UserDefaults.standard.set(textField!.text, forKey: self.defaultsForEmail)
+            guard let textField = alert?.textFields?[0] else {
+                print("Couldn't find alert text field")
+                return
+            }
+
+            if let text = textField.text, text.contains("@") {
+                UserDefaults.standard.set(text, forKey: self.defaultsForEmail)
             } else {
                 self.didPressSettingsButton(message: "Please enter a valid email address");
             }
         }))
         
         self.present(alert, animated: true, completion: nil)
+    }
+}
+
+extension ViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n") {
+            self.didPressMajorKey()
+            return false
+        }
+        return true
     }
 }
 
@@ -187,4 +190,3 @@ extension ViewController: MajorKeyViewDelegate {
         didPressSettingsButton(message: "This is where all major keys will be sent to");
     }
 }
-
