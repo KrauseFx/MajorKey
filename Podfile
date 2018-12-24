@@ -8,3 +8,4 @@ target 'Major Key' do
   # Pods for Major Key
   pod 'SwiftMessages', :inhibit_warnings => true
 end
+

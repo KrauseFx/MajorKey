@@ -6,13 +6,9 @@ PODS:
 DEPENDENCIES:
   - SwiftMessages
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - SwiftMessages
-
 SPEC CHECKSUMS:
   SwiftMessages: 42ed7b6e1f2f1ead9ee667dc61a0ae87e4f49570
 
-PODFILE CHECKSUM: 778997de510b13aa69193cb143495c3112b035c4
+PODFILE CHECKSUM: e3d2cf2647e42e51a0890f730e18471bf4c587fb
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.4.0

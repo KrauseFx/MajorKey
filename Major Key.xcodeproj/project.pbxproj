@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A90523921D18E23000F8731 /* MajorKeyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A90523821D18E23000F8731 /* MajorKeyButtonView.swift */; };
+		9A90523B21D18E38000F8731 /* MajorKeyButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A90523A21D18E38000F8731 /* MajorKeyButtonView.xib */; };
+		9AB92E0421B08FA100A32C5A /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB92E0321B08FA100A32C5A /* Messages.framework */; };
+		9AB92E0721B08FA100A32C5A /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB92E0621B08FA100A32C5A /* MessagesViewController.swift */; };
+		9AB92E0A21B08FA100A32C5A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB92E0821B08FA100A32C5A /* MainInterface.storyboard */; };
+		9AB92E0C21B08FA500A32C5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AB92E0B21B08FA500A32C5A /* Assets.xcassets */; };
+		9AB92E1021B08FA500A32C5A /* iMessage Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9AB92E0221B08FA100A32C5A /* iMessage Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B84B043C88B90AF6796B9AD6 /* Pods_Major_Key.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7D06D34549E267256245F8 /* Pods_Major_Key.framework */; };
 		CA105C6D212E280800A10419 /* MajorKeyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA105C6C212E280800A10419 /* MajorKeyUITests.swift */; };
 		CA105C75212E281000A10419 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA105C74212E281000A10419 /* SnapshotHelper.swift */; };
@@ -20,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9AB92E0E21B08FA500A32C5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA49839D1FCB8D8A0076BD21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AB92E0121B08FA100A32C5A;
+			remoteInfo = "iMessage Extension";
+		};
 		CA105C6F212E280800A10419 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CA49839D1FCB8D8A0076BD21 /* Project object */;
@@ -29,10 +43,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9AB92E1421B08FA500A32C5A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9AB92E1021B08FA500A32C5A /* iMessage Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1FEFDD9B6786AD868BF47340 /* Pods-Major Key.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Major Key.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Major Key/Pods-Major Key.debug.xcconfig"; sourceTree = "<group>"; };
 		5DDC55DC35E51319D901146D /* Pods-Major Key.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Major Key.release.xcconfig"; path = "Pods/Target Support Files/Pods-Major Key/Pods-Major Key.release.xcconfig"; sourceTree = "<group>"; };
 		7C7D06D34549E267256245F8 /* Pods_Major_Key.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Major_Key.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A90523821D18E23000F8731 /* MajorKeyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorKeyButtonView.swift; sourceTree = "<group>"; };
+		9A90523A21D18E38000F8731 /* MajorKeyButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MajorKeyButtonView.xib; sourceTree = "<group>"; };
+		9AB92E0221B08FA100A32C5A /* iMessage Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iMessage Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB92E0321B08FA100A32C5A /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		9AB92E0621B08FA100A32C5A /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		9AB92E0921B08FA100A32C5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		9AB92E0B21B08FA500A32C5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9AB92E0D21B08FA500A32C5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA105C6A212E280800A10419 /* MajorKeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MajorKeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA105C6C212E280800A10419 /* MajorKeyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorKeyUITests.swift; sourceTree = "<group>"; };
 		CA105C6E212E280800A10419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,9 +82,18 @@
 		CA4983B41FCB8D8A0076BD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDA201FA1FCF364500646875 /* MajorKeyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MajorKeyView.xib; sourceTree = "<group>"; };
 		CDA201FC1FCF375C00646875 /* MajorKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorKeyView.swift; sourceTree = "<group>"; };
+		EE964E97EFC0BA21F67CE29B /* Pods_iMessage_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMessage_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9AB92DFF21B08FA100A32C5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB92E0421B08FA100A32C5A /* Messages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA105C67212E280800A10419 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,8 +116,50 @@
 			isa = PBXGroup;
 			children = (
 				7C7D06D34549E267256245F8 /* Pods_Major_Key.framework */,
+				9AB92E0321B08FA100A32C5A /* Messages.framework */,
+				EE964E97EFC0BA21F67CE29B /* Pods_iMessage_Extension.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AB92E0521B08FA100A32C5A /* iMessage Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9AB92E0621B08FA100A32C5A /* MessagesViewController.swift */,
+				9A90523821D18E23000F8731 /* MajorKeyButtonView.swift */,
+				9A90523A21D18E38000F8731 /* MajorKeyButtonView.xib */,
+				9AB92E0821B08FA100A32C5A /* MainInterface.storyboard */,
+				9AB92E0B21B08FA500A32C5A /* Assets.xcassets */,
+				9AB92E0D21B08FA500A32C5A /* Info.plist */,
+			);
+			path = "iMessage Extension";
+			sourceTree = "<group>";
+		};
+		9AB92E1521B0928400A32C5A /* MajorKeyView */ = {
+			isa = PBXGroup;
+			children = (
+				CDA201FA1FCF364500646875 /* MajorKeyView.xib */,
+				CDA201FC1FCF375C00646875 /* MajorKeyView.swift */,
+			);
+			path = MajorKeyView;
+			sourceTree = "<group>";
+		};
+		9AB92E1621B092A500A32C5A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA4983AA1FCB8D8A0076BD21 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9AB92E1721B092C000A32C5A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9AB92E1521B0928400A32C5A /* MajorKeyView */,
+				CA4983B11FCB8D8A0076BD21 /* LaunchScreen.storyboard */,
+				CA4983AC1FCB8D8A0076BD21 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C4F936AC3A01B6F5B87F5012 /* Pods */ = {
@@ -98,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				CA4983A71FCB8D8A0076BD21 /* Major Key */,
+				9AB92E0521B08FA100A32C5A /* iMessage Extension */,
 				CA105C6B212E280800A10419 /* MajorKeyUITests */,
 				CA4983A61FCB8D8A0076BD21 /* Products */,
 				C4F936AC3A01B6F5B87F5012 /* Pods */,
@@ -110,6 +198,7 @@
 			children = (
 				CA4983A51FCB8D8A0076BD21 /* Major Key.app */,
 				CA105C6A212E280800A10419 /* MajorKeyUITests.xctest */,
+				9AB92E0221B08FA100A32C5A /* iMessage Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,12 +207,9 @@
 			isa = PBXGroup;
 			children = (
 				CA4983A81FCB8D8A0076BD21 /* AppDelegate.swift */,
-				CA4983AA1FCB8D8A0076BD21 /* ViewController.swift */,
-				CDA201FA1FCF364500646875 /* MajorKeyView.xib */,
-				CDA201FC1FCF375C00646875 /* MajorKeyView.swift */,
-				CA4983AC1FCB8D8A0076BD21 /* Main.storyboard */,
+				9AB92E1721B092C000A32C5A /* Views */,
+				9AB92E1621B092A500A32C5A /* Controllers */,
 				CA4983AF1FCB8D8A0076BD21 /* Assets.xcassets */,
-				CA4983B11FCB8D8A0076BD21 /* LaunchScreen.storyboard */,
 				CA4983B41FCB8D8A0076BD21 /* Info.plist */,
 			);
 			path = "Major Key";
@@ -132,6 +218,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9AB92E0121B08FA100A32C5A /* iMessage Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AB92E1121B08FA500A32C5A /* Build configuration list for PBXNativeTarget "iMessage Extension" */;
+			buildPhases = (
+				9AB92DFE21B08FA100A32C5A /* Sources */,
+				9AB92DFF21B08FA100A32C5A /* Frameworks */,
+				9AB92E0021B08FA100A32C5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iMessage Extension";
+			productName = "iMessage Extension";
+			productReference = 9AB92E0221B08FA100A32C5A /* iMessage Extension.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
 		CA105C69212E280800A10419 /* MajorKeyUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA105C71212E280800A10419 /* Build configuration list for PBXNativeTarget "MajorKeyUITests" */;
@@ -159,10 +262,13 @@
 				CA4983A21FCB8D8A0076BD21 /* Frameworks */,
 				CA4983A31FCB8D8A0076BD21 /* Resources */,
 				5A338974D33094411D280D1B /* [CP] Embed Pods Frameworks */,
+				EF17CBB3EC427E09A18656FD /* [CP] Copy Pods Resources */,
+				9AB92E1421B08FA500A32C5A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9AB92E0F21B08FA500A32C5A /* PBXTargetDependency */,
 			);
 			name = "Major Key";
 			productName = "Major Key";
@@ -175,10 +281,14 @@
 		CA49839D1FCB8D8A0076BD21 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Felix Krause";
 				TargetAttributes = {
+					9AB92E0121B08FA100A32C5A = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+					};
 					CA105C69212E280800A10419 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1010;
@@ -188,7 +298,7 @@
 					CA4983A41FCB8D8A0076BD21 = {
 						CreatedOnToolsVersion = 9.1;
 						LastSwiftMigration = 1010;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -206,12 +316,23 @@
 			projectRoot = "";
 			targets = (
 				CA4983A41FCB8D8A0076BD21 /* Major Key */,
+				9AB92E0121B08FA100A32C5A /* iMessage Extension */,
 				CA105C69212E280800A10419 /* MajorKeyUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9AB92E0021B08FA100A32C5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB92E0C21B08FA500A32C5A /* Assets.xcassets in Resources */,
+				9A90523B21D18E38000F8731 /* MajorKeyButtonView.xib in Resources */,
+				9AB92E0A21B08FA100A32C5A /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA105C68212E280800A10419 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -269,9 +390,33 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Major Key/Pods-Major Key-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EF17CBB3EC427E09A18656FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Major Key/Pods-Major Key-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9AB92DFE21B08FA100A32C5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A90523921D18E23000F8731 /* MajorKeyButtonView.swift in Sources */,
+				9AB92E0721B08FA100A32C5A /* MessagesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA105C66212E280800A10419 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -294,6 +439,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9AB92E0F21B08FA500A32C5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9AB92E0121B08FA100A32C5A /* iMessage Extension */;
+			targetProxy = 9AB92E0E21B08FA500A32C5A /* PBXContainerItemProxy */;
+		};
 		CA105C70212E280800A10419 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CA4983A41FCB8D8A0076BD21 /* Major Key */;
@@ -302,6 +452,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		9AB92E0821B08FA100A32C5A /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AB92E0921B08FA100A32C5A /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		CA4983AC1FCB8D8A0076BD21 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -321,6 +479,47 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9AB92E1221B08FA500A32C5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UC8UZFR7L3;
+				INFOPLIST_FILE = "iMessage Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.heldesouky.MajorKey.iMessage-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9AB92E1321B08FA500A32C5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UC8UZFR7L3;
+				INFOPLIST_FILE = "iMessage Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.heldesouky.MajorKey.iMessage-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		CA105C72212E280800A10419 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -476,15 +675,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1FEFDD9B6786AD868BF47340 /* Pods-Major Key.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_TEAM = N8X438SEU2;
+				DEVELOPMENT_TEAM = UC8UZFR7L3;
 				INFOPLIST_FILE = "Major Key/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.majorkey.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heldesouky.MajorKey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development me.majorkey.app";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -495,16 +696,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5DDC55DC35E51319D901146D /* Pods-Major Key.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_TEAM = N8X438SEU2;
+				DEVELOPMENT_TEAM = UC8UZFR7L3;
 				INFOPLIST_FILE = "Major Key/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.majorkey.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heldesouky.MajorKey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore me.majorkey.app";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -514,6 +716,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9AB92E1121B08FA500A32C5A /* Build configuration list for PBXNativeTarget "iMessage Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AB92E1221B08FA500A32C5A /* Debug */,
+				9AB92E1321B08FA500A32C5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CA105C71212E280800A10419 /* Build configuration list for PBXNativeTarget "MajorKeyUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
