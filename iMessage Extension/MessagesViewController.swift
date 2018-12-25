@@ -16,7 +16,8 @@ class MessagesViewController: MSMessagesAppViewController {
     
     let apiKey = ""
     let apiSecret = ""
-
+    
+    let defaults = UserDefaults.init(suiteName: "group.me.majorkey.MajorKey")
     let defaultsForHistory = "MajorKeys"
     let defaultsForEmail = "MajorKeyEmail"
     
@@ -27,7 +28,7 @@ class MessagesViewController: MSMessagesAppViewController {
         let majorView = MajorKeyButtonView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 92))
         majorView.delegate = self as MajorKeyViewDelegate
         self.majorTextView.inputAccessoryView = majorView
-
+        defaults?.synchronize()
     }
     
     fileprivate func setupTextView() {
@@ -81,19 +82,19 @@ class MessagesViewController: MSMessagesAppViewController {
         triggerEmail(text: text)
     }
     
-    func showAlert(title: String, body: String, theme: Theme) {
-        let view = MessageView.viewFromNib(layout: .cardView)
-        view.configureTheme(theme)
-        view.configureDropShadow()
-        view.button?.removeFromSuperview()
-        view.configureContent(title: title, body: body, iconText: "🔑")
-        
-        var config = SwiftMessages.Config()
-        config.presentationStyle = .top
-        config.interactiveHide = true
-        config.preferredStatusBarStyle = .lightContent
-        SwiftMessages.show(config: config, view: view)
-    }
+//    func showAlert(title: String, body: String, theme: Theme) {
+//        let view = MessageView.viewFromNib(layout: .cardView)
+//        view.configureTheme(theme)
+//        view.configureDropShadow()
+//        view.button?.removeFromSuperview()
+//        view.configureContent(title: title, body: body, iconText: "🔑")
+//        
+//        var config = SwiftMessages.Config()
+//        config.presentationStyle = .top
+//        config.interactiveHide = true
+//        config.preferredStatusBarStyle = .lightContent
+//        SwiftMessages.show(config: config, view: view)
+//    }
     
     func triggerEmail(text: String) {
         let url = URL(string: "https://api.mailjet.com/v3.1/send")!
@@ -111,7 +112,7 @@ class MessagesViewController: MSMessagesAppViewController {
         // Subject allows 255 chars maximum
         let truncatedTextForSubject = text.suffix(200)
         
-        let emailAddress = UserDefaults.standard.string(forKey: defaultsForEmail)!
+        let emailAddress = defaults?.string(forKey: defaultsForEmail)!
         let postContent = [
             "Messages": [
                 [
@@ -139,20 +140,20 @@ class MessagesViewController: MSMessagesAppViewController {
                 DispatchQueue.main.async {
                     guard let data = data, error == nil else {                                                 // check for fundamental networking error
                         print("error=\(String(describing: error))")
-                        self.showAlert(title: "Error", body: String(describing: error), theme: .error);
+                        //self.showAlert(title: "Error", body: String(describing: error), theme: .error);
                         return
                     }
                     
                     if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
                         print("statusCode should be 200, but is \(httpStatus.statusCode)")
                         print("response = \(String(describing: response) )")
-                        self.showAlert(title: "Error", body: String(describing: response), theme: .error);
+                       // self.showAlert(title: "Error", body: String(describing: response), theme: .error);
                         return
                     }
                     
                     let responseString = String(data: data, encoding: .utf8)
                     print("responseString = \(String(describing: responseString))")
-                    self.showAlert(title: "Major Key", body: "Never forget dat major key", theme: .success);
+                    //self.showAlert(title: "Major Key", body: "Never forget dat major key", theme: .success);
                     
                     self.majorTextView.text = ""
                 }

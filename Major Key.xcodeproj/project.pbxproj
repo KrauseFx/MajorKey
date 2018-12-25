@@ -63,6 +63,8 @@
 		7C7D06D34549E267256245F8 /* Pods_Major_Key.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Major_Key.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A90523821D18E23000F8731 /* MajorKeyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorKeyButtonView.swift; sourceTree = "<group>"; };
 		9A90523A21D18E38000F8731 /* MajorKeyButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MajorKeyButtonView.xib; sourceTree = "<group>"; };
+		9A90523C21D1AABD000F8731 /* Major Key.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Major Key.entitlements"; sourceTree = "<group>"; };
+		9A90523D21D1AB3F000F8731 /* iMessage Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iMessage Extension.entitlements"; sourceTree = "<group>"; };
 		9AB92E0221B08FA100A32C5A /* iMessage Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iMessage Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB92E0321B08FA100A32C5A /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		9AB92E0621B08FA100A32C5A /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -122,12 +124,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9A90523E21D1B3C0000F8731 /* MajorKeyView */ = {
+			isa = PBXGroup;
+			children = (
+				9A90523821D18E23000F8731 /* MajorKeyButtonView.swift */,
+				9A90523A21D18E38000F8731 /* MajorKeyButtonView.xib */,
+			);
+			path = MajorKeyView;
+			sourceTree = "<group>";
+		};
 		9AB92E0521B08FA100A32C5A /* iMessage Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9A90523D21D1AB3F000F8731 /* iMessage Extension.entitlements */,
 				9AB92E0621B08FA100A32C5A /* MessagesViewController.swift */,
-				9A90523821D18E23000F8731 /* MajorKeyButtonView.swift */,
-				9A90523A21D18E38000F8731 /* MajorKeyButtonView.xib */,
+				9A90523E21D1B3C0000F8731 /* MajorKeyView */,
 				9AB92E0821B08FA100A32C5A /* MainInterface.storyboard */,
 				9AB92E0B21B08FA500A32C5A /* Assets.xcassets */,
 				9AB92E0D21B08FA500A32C5A /* Info.plist */,
@@ -206,6 +217,7 @@
 		CA4983A71FCB8D8A0076BD21 /* Major Key */ = {
 			isa = PBXGroup;
 			children = (
+				9A90523C21D1AABD000F8731 /* Major Key.entitlements */,
 				CA4983A81FCB8D8A0076BD21 /* AppDelegate.swift */,
 				9AB92E1721B092C000A32C5A /* Views */,
 				9AB92E1621B092A500A32C5A /* Controllers */,
@@ -288,6 +300,11 @@
 					9AB92E0121B08FA100A32C5A = {
 						CreatedOnToolsVersion = 10.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					CA105C69212E280800A10419 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -299,6 +316,11 @@
 						CreatedOnToolsVersion = 9.1;
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -484,6 +506,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = "iMessage Extension/iMessage Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UC8UZFR7L3;
@@ -505,6 +528,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = "iMessage Extension/iMessage Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UC8UZFR7L3;
@@ -677,6 +701,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Major Key/Major Key.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
@@ -698,6 +723,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Major Key/Major Key.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;

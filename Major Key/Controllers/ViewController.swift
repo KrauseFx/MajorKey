@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     let apiKey = ""
     let apiSecret = ""
     
+    let defaults = UserDefaults.init(suiteName: "group.me.majorkey.MajorKey")
     let defaultsForHistory = "MajorKeys"
     let defaultsForEmail = "MajorKeyEmail"
     
@@ -26,6 +27,36 @@ class ViewController: UIViewController {
         let majorView = MajorKeyView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 92))
         majorView.delegate = self
         self.majorTextView.inputAccessoryView = majorView
+        migrateUserDefaultsToAppGroups()
+        defaults?.synchronize()
+    }
+    
+    func migrateUserDefaultsToAppGroups() {
+        
+        // User Defaults - Old
+        let userDefaults = UserDefaults.standard
+        
+        // App Groups Default - New
+        let groupDefaults = UserDefaults(suiteName: "group.me.majorkey.MajorKey")
+        
+        // Key to track if we migrated
+        let didMigrateToAppGroups = "DidMigrateToAppGroups"
+        
+        if let groupDefaults = groupDefaults {
+            if !groupDefaults.bool(forKey: didMigrateToAppGroups) {
+                for key in userDefaults.dictionaryRepresentation().keys {
+                    groupDefaults.set(userDefaults.dictionaryRepresentation()[key], forKey: key)
+                }
+                groupDefaults.set(true, forKey: didMigrateToAppGroups)
+                groupDefaults.synchronize()
+                print("Successfully migrated defaults")
+            } else {
+                print("No need to migrate defaults")
+            }
+        } else {
+            print("Unable to create NSUserDefaults with given app group")
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -146,7 +177,9 @@ class ViewController: UIViewController {
             textField.placeholder = "Your email address"
             textField.keyboardType = .emailAddress
             textField.textContentType = UITextContentType.emailAddress
-            textField.text = UserDefaults.standard.string(forKey: self.defaultsForEmail);
+            self.defaults?.set(textField.text, forKey: self.defaultsForEmail)
+            textField.text = self.defaults?.string(forKey: self.defaultsForEmail)
+            self.defaults?.synchronize()
         }
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
