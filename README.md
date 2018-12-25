@@ -50,6 +50,22 @@ Within a second you'll have the note in your email inbox. Extremely useful if yo
 All with no waiting times or animations.
 
 [**See the app in action**](https://www.youtube.com/watch?v=dOm5H5a8fbY)
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+### iMessage Extension
+<img src="iMessegeExt2.png" width="150" align="right">
+
+<img src="iMessegeExt1.png" width="150" align="right">
+
+A lot of times when I'm chatting with a friend of mine they tell me something that I should NOT forget like a very important date or something, but when I finish chatting and close the app I totally forget what they told me... even sometimes I forget what I'm doing looking into my home screen! 
+If this scenario looks familiar, here is the solution for you... 
+While texting, just
+- Tap on the Extension icon
+- Type the note
+- Confirm
+and get back chatting! 
+
+
 
 ## Use the app
 
