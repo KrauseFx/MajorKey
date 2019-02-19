@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     let apiKey = ""
     let apiSecret = ""
+    let fromAddress = "mailjet2@krausefx.com"
     
     let defaultsForHistory = "MajorKeys"
     let defaultsForEmail = "MajorKeyEmail"
@@ -84,7 +85,7 @@ class ViewController: UIViewController {
             "Messages": [
                 [
                     "From": [
-                        "Email": "new@MajorKey.me",
+                        "Email": fromAddress,
                         "Name": "New MajorKey"
                     ],
                     "To": [
