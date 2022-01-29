@@ -1,3 +1,9 @@
+## This project is deprecated
+
+I am using [Note to Self Mail App](https://note2selfmail.app/) now, as it's doing a good job, and I didn't want to maintain Major Key anymore.
+
+---
+
 # Major Key
 
 [![Twitter: @KrauseFx](https://img.shields.io/badge/contact-@KrauseFx-blue.svg?style=flat)](https://twitter.com/KrauseFx)
@@ -58,3 +64,7 @@ All with no waiting times or animations.
 - Get your [MailJet](https://mailjet.com) API key and add it to `ViewController.swift`
 - Add your email address to `ViewController.swift`
 - Install the app on your phone
+
+## This project is deprecated
+
+I am using [Note to Self Mail App](https://note2selfmail.app/) now, as it's doing a good job, and I didn't want to maintain Major Key anymore.
